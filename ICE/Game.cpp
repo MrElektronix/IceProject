@@ -8,12 +8,12 @@ void Game::Init(char* title, int width, int height) {
 
 void Game::Update() {
 	SDL_SetRenderDrawColor(renderer, 105, 159, 172, 0); // set the color for the screen
-	SDL_RenderPresent(renderer); //updates the screen for rendering
 }
+
 
 void Game::Render() {
 	SDL_RenderClear(renderer); // clears the screen
-	SDL_RenderPresent(renderer);
-	SDL_Delay(5000);
+	SDL_RenderPresent(renderer); //updates the screen for rendering
+	SDL_Delay(500);
 }
 
