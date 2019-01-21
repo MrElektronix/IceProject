@@ -9,9 +9,11 @@ class GameObject {
 		int height;
 		float speed;
 		Texture texture;
-		SDL_Renderer* renderer = NULL;
+		Game game;
 	public:
-		void Init(float, float, int, int, SDL_Renderer*);
-		void Update();
+		virtual void Init(float, float, int, int, Game);
+		virtual void Update();
+		void Render();
 		void AddTexture(std::string);
+		void SetBoundary();
 };

@@ -1,12 +1,14 @@
 #pragma once
 #include "SDL.h"
 #include "Texture.h";
+#include <vector>;
 
 class Game {
 	private:
 		char* _title;
-		int _width;
-		int _height;
+	public:
+		int width;
+		int height;
 	public:
 		SDL_Window* window = NULL;
 		SDL_Renderer* renderer = NULL;
