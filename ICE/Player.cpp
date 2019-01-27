@@ -1,11 +1,14 @@
 #include "Player.h";
 
-void Player::Init(float x, float y, int width, int height, Game game) {
-	this->speed = 0.2;
-	this->x = ((game.width / 2) - width);
-	this->y = game.height - height;
 
-	GameObject::Init(this->x, this->y, width, height, game);
+Player::Player(float x, float y, int width, int height) : GameObject(x, y, width, height) {
+	this->speed = 0.2;
+	this->x = ((Game::width / 2) - this->width);
+	this->y = Game::height - this->height;
+}
+
+Player::~Player() {
+
 }
 
 void Player::Update() {
@@ -16,5 +19,22 @@ void Player::Update() {
 		this->x += this->speed;
 	}
 
+	this->SetBoundary();
 	GameObject::Update();
+}
+
+void Player::SetBoundary() {
+	if (GameObject::x + GameObject::width >= Game::width) {
+		GameObject::x = Game::width - GameObject::width;
+	}
+	if (GameObject::x <= 0) {
+		GameObject::x = 0;
+	}
+
+	if (GameObject::y + GameObject::height >= Game::height) {
+		GameObject::y = Game::height - GameObject::height;
+	}
+	if (GameObject::y <= 0) {
+		GameObject::y = 0;
+	}
 }

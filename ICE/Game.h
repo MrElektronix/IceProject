@@ -1,24 +1,25 @@
 #pragma once
-#include "SDL.h"
-#include "Texture.h";
-#include <vector>;
+
+#include <SDL.h>
+#include <vector>
+#include <iostream>
+#include "Texture.h"
 
 class Game {
-	private:
-		char* _title;
 	public:
-		int width;
-		int height;
+		static int width;
+		static int height;
+		static SDL_Renderer *renderer;
+		SDL_Window *window;
+		bool isRunning;
 	public:
-		SDL_Window* window = NULL;
-		SDL_Renderer* renderer = NULL;
-
-		void Init(char*, int, int);
+		Game(std::string, int, int);
+		~Game();
 		void Update();
 		void Render();
 		void Clear();
 		void Quit();
 		void HandleEvent();
-		bool isRunning;
 };
+
 

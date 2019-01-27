@@ -2,14 +2,17 @@
 
 #include "IceScoop.h";
 
+
 class ScoopSpawner {
 	private:
-		int _objectCount;
 		float _spawnRate;
-		IceScoop *scoops;
-		Game game;
+		Game* game;
 	public:
-		void Init(int, float, Game);
+		int _objectCount;
+		IceScoop *scoops;
+	public:
+		ScoopSpawner(int objcount, float spawnrate);
+		~ScoopSpawner();
 		void Spawn();
 		void Update();
 };

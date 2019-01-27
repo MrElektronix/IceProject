@@ -1,40 +1,42 @@
-#include "Game.h";
-#include "Texture.h";
-#include "SDL_image.h";
-#include "GameObject.h";
 #include "Player.h";
-#include "IceScoop.h";
 #include "ScoopSpawner.h";
+#include "Text.h";
 
 int main(int argc, char *argv[])
 {
-	Game game;
-	Player player;
-	ScoopSpawner scoopSpawner;
+	Game game("Icing", 800, 750);
+	//Player player(0, 0, 80, 145);
+	//player.AddTexture("assets/icecone.PNG");
+
+	//ScoopSpawner scoopSpawner(5, 5000);
+	//scoopSpawner.Spawn();
+
+	//Text text(Game::renderer, "fonts/arial.ttf", 30, "testing", {255, 0, 0, 255});
 	
-	game.Init((char*)"Icing", 800, 750);
-
-	SDL_Delay(3000);
-
-	player.Init(0, 0, 80, 145, game);
-	player.AddTexture((char*) "assets/icecone.PNG");
-
-	scoopSpawner.Init(10, 5000, game);
-
-	scoopSpawner.Spawn();
 	while (game.isRunning) {
 		game.HandleEvent();
-		player.SetBoundary();
-
+		/*
 		player.Update();
 		player.Render();
-
-		scoopSpawner.Update();
-
+		
+		for (int i = 0; i < scoopSpawner._objectCount; i++) {
+			scoopSpawner.scoops[i].Collision(player);
+			if (scoopSpawner.scoops[i].hasCollided) {
+				//scoopSpawner._objectCount -= 1;
+				scoopSpawner.scoops[i].Destroy();
+			}
+			else {
+				//std::cout << scoopSpawner._objectCount << std::endl;
+				scoopSpawner.Update();
+			}
+		}
+		*/
+		//text.Render(100, 100, Game::renderer);
+		
 		game.Render();
 		game.Clear();
 	}
-
+	
 
 	return 0;
 	

@@ -1,23 +1,25 @@
 #include "Game.h";
 #include <iostream>;
 
-void Game::Init(char* title, int width, int height) {
+Game::Game(std::string title, int width, int height) {
+	SDL_Init(SDL_INIT_EVERYTHING);
 
 	this->width = width;
 	this->height = height;
-
-	SDL_Init(SDL_INIT_EVERYTHING);
-
-	this->window = SDL_CreateWindow(title, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, width, height, 0);
 	
+	this->window = SDL_CreateWindow(title.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, this->width, this->height, 0);
 	this->renderer = SDL_CreateRenderer(window, -1, 0);
 	this->isRunning = true;
 }
 
+Game::~Game() {
+	std::cout << "Game Destroyed" << std::endl;
+}
+
+
 void Game::Update() {
 	
 }
-
 
 void Game::Render() {
 	SDL_RenderPresent(this->renderer); //updates the screen for rendering
@@ -27,11 +29,15 @@ void Game::Clear() {
 	SDL_RenderClear(this->renderer);
 }
 
+
 void Game::Quit() {
 	SDL_DestroyRenderer(this->renderer);
 	SDL_DestroyWindow(window);
+
+	IMG_Quit();
 	SDL_Quit();
 }
+
 
 void Game::HandleEvent() {
 	SDL_Event event;
@@ -41,6 +47,7 @@ void Game::HandleEvent() {
 	{
 	case SDL_QUIT:
 		this->isRunning = false;
+		Game::Quit();
 		break;
 	default:
 		break;

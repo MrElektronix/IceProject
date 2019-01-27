@@ -2,18 +2,20 @@
 #include "Game.h";
 
 class GameObject {
+	private:
+		Texture _textureReference;
 	public:
 		float x;
 		float y;
 		int width;
 		int height;
 		float speed;
-		Texture texture;
-		Game game;
 	public:
-		virtual void Init(float, float, int, int, Game);
+		GameObject() {};
+		GameObject(float xPos, float yPos, int objWidth, int objHeight);
+		~GameObject();
 		virtual void Update();
 		void Render();
 		void AddTexture(std::string);
-		void SetBoundary();
+		void Destroy();
 };

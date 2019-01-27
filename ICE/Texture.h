@@ -1,7 +1,8 @@
 #pragma once
+
 #include "Game.h";
 #include "SDL_image.h"
-#include <iostream>;
+#include <iostream>
 
 class Texture {
 	private:
@@ -11,7 +12,10 @@ class Texture {
 		SDL_Rect rect;
 		bool IsInitialized;
 	public:
-		void Init(std::string, SDL_Renderer*, float, float, int, int);
-		void Render(SDL_Renderer*);
+		Texture() {};
+		Texture(std::string directory, SDL_Renderer* renderer, float xPos, float yPos, int width, int height);
+		~Texture();
+		void Render(SDL_Renderer* renderer);
 		void Clear();
 };
+

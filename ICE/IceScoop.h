@@ -1,8 +1,14 @@
 #pragma once
+
 #include "GameObject.h";
 
 class IceScoop : public GameObject {
 	public:
-		void Init(float, float, int, int, Game) override;
+		bool hasCollided = false;
+	public:
+		IceScoop() {};
+		IceScoop(float x, float y, int width, int height);
+		~IceScoop();
+		void Collision(GameObject);
 		void Update() override;
 };
