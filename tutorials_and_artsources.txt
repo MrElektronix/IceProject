@@ -1,0 +1,23 @@
+Youtube:
+
+1. How to Create and Run a C++ Program in Visual Studio 2017 - https://www.youtube.com/watch?v=0uQKemgUJbY
+2. SDL2/C++ Tutorial. Setting Up SDL & Creating Your First Window Visual Studio 2017 - https://www.youtube.com/watch?v=QQzAHcojEKg
+3. How to Write a C++ Class - https://www.youtube.com/watch?v=9RJTQmK0YPI
+4. How to Write a C++ Class - https://www.youtube.com/watch?v=3dHBFBw13E0
+5. How To Make A Game #2 : Drawing Textures/Sprites To The Screen : C++ And SDL2 Image Tutorial - https://www.youtube.com/watch?v=YrWQsuDT3NE
+6. POINTERS in C++ - https://www.youtube.com/watch?v=DTxHyVn0ODg
+7. LOADING IMAGES IN SDL2 WITH SDL_IMAGE - http://gigi.nullneuron.net/gigilabs/loading-images-in-sdl2-with-sdl_image/
+8. Rendering Text - C++/SDL 2 - https://www.youtube.com/watch?v=FIjj6UVXtXk
+9. Introduction to Polymorphism - https://www.youtube.com/watch?v=R_PPA9eejDw
+
+Other sites: 
+1. https://stackoverflow.com/questions/357307/how-to-call-a-parent-class-function-from-derived-class-function
+2. https://stackoverflow.com/questions/7560114/random-number-c-in-some-range
+3. https://www.geeksforgeeks.org/array-strings-c-3-different-ways-create/
+4. https://www.tutorialspoint.com/What-are-cin-cout-and-cerr-streams-in-Cplusplus
+
+
+art:
+scoop 1 - https://www.google.com/search?q=scoop+png&source=lnms&tbm=isch&sa=X&ved=0ahUKEwj7yqOqlo7gAhUMElAKHc8MAK8Q_AUIDigB&biw=1536&bih=723#imgrc=liKqxvtj3dgbXM:
+scoop 2 - https://www.google.com/search?q=scoop+png&source=lnms&tbm=isch&sa=X&ved=0ahUKEwj7yqOqlo7gAhUMElAKHc8MAK8Q_AUIDigB&biw=1536&bih=723#imgrc=UhCea5Ok5Gm6tM:
+icecone - https://www.google.com/search?biw=1536&bih=723&tbm=isch&sa=1&ei=C8FNXPrlMIHXwAL815TgDA&q=empty+ice+cream+cone+png&oq=ice+cone+png&gs_l=img.3.9.35i39j0i8i30i19l9.10323.12529..15127...0.0..0.60.113.2......1....1..gws-wiz-img.idhSBG-OVts#imgrc=q16OVKFHndoYlM:

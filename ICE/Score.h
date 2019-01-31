@@ -1,10 +1,13 @@
 #pragma once
-
+#include "Text.h";
 
 class Score {
 	public:
-		int score;
+		Text* text;
+		int currentScore;
 	public:
-		Score();
+		Score(Text* text);
 		~Score();
+		void Render(Game* game);
+		void Update();
 };

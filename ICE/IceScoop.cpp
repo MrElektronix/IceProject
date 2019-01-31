@@ -1,6 +1,6 @@
 #include "IceScoop.h";
 
-IceScoop::IceScoop(float x, float y, int width, int height) : GameObject(x, y, width, height) {
+IceScoop::IceScoop(float x, float y, int width, int height, Game* game) : GameObject(x, y, width, height, game) {
 	this->speed = 0.1;
 }
 

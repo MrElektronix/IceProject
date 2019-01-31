@@ -4,7 +4,7 @@
 Game::Game(std::string title, int width, int height) {
 	SDL_Init(SDL_INIT_EVERYTHING);
 
-	this->width = width;
+	this->width = width; 
 	this->height = height;
 	
 	this->window = SDL_CreateWindow(title.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, this->width, this->height, 0);
@@ -13,7 +13,7 @@ Game::Game(std::string title, int width, int height) {
 }
 
 Game::~Game() {
-	std::cout << "Game Destroyed" << std::endl;
+	
 }
 
 
@@ -30,16 +30,16 @@ void Game::Clear() {
 }
 
 
-void Game::Quit() {
+void Game::Quit() { 
 	SDL_DestroyRenderer(this->renderer);
-	SDL_DestroyWindow(window);
+	SDL_DestroyWindow(this->window);
 
-	IMG_Quit();
+	IMG_Quit();	
 	SDL_Quit();
 }
 
 
-void Game::HandleEvent() {
+void Game::HandleEvent() { 
 	SDL_Event event;
 	SDL_PollEvent(&event);
 

@@ -5,13 +5,13 @@
 #include <iostream>
 #include "Texture.h"
 
-class Game {
+class Game { // class for making a new game screen
 	public:
-		static int width;
-		static int height;
-		static SDL_Renderer *renderer;
+		int width;
+		int height;
+		SDL_Renderer *renderer;
 		SDL_Window *window;
-		bool isRunning;
+		bool isRunning; 
 	public:
 		Game(std::string, int, int);
 		~Game();

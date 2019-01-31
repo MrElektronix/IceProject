@@ -7,7 +7,7 @@ class IceScoop : public GameObject {
 		bool hasCollided = false;
 	public:
 		IceScoop() {};
-		IceScoop(float x, float y, int width, int height);
+		IceScoop(float x, float y, int width, int height, Game* game);
 		~IceScoop();
 		void Collision(GameObject);
 		void Update() override;

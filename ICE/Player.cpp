@@ -1,10 +1,10 @@
 #include "Player.h";
 
 
-Player::Player(float x, float y, int width, int height) : GameObject(x, y, width, height) {
+Player::Player(float x, float y, int width, int height, Game* game) : GameObject(x, y, width, height, game) {
 	this->speed = 0.2;
-	this->x = ((Game::width / 2) - this->width);
-	this->y = Game::height - this->height;
+	this->x = ((this->gameReference->width / 2) - this->width);
+	this->y = this->gameReference->width - this->height;
 }
 
 Player::~Player() {
@@ -24,15 +24,15 @@ void Player::Update() {
 }
 
 void Player::SetBoundary() {
-	if (GameObject::x + GameObject::width >= Game::width) {
-		GameObject::x = Game::width - GameObject::width;
+	if (GameObject::x + GameObject::width >= this->gameReference->width) {
+		GameObject::x = this->gameReference->width - GameObject::width;
 	}
 	if (GameObject::x <= 0) {
 		GameObject::x = 0;
 	}
 
-	if (GameObject::y + GameObject::height >= Game::height) {
-		GameObject::y = Game::height - GameObject::height;
+	if (GameObject::y + GameObject::height >= this->gameReference->height) {
+		GameObject::y = this->gameReference->height - GameObject::height;
 	}
 	if (GameObject::y <= 0) {
 		GameObject::y = 0;

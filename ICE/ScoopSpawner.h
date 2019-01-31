@@ -8,10 +8,11 @@ class ScoopSpawner {
 		float _spawnRate;
 		Game* game;
 	public:
-		int _objectCount;
+		int maxObjectCount;
+		int objectCount;
 		IceScoop *scoops;
 	public:
-		ScoopSpawner(int objcount, float spawnrate);
+		ScoopSpawner(int objcount, float spawnrate, Game* game);
 		~ScoopSpawner();
 		void Spawn();
 		void Update();

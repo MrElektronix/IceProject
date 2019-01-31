@@ -10,12 +10,13 @@ class GameObject {
 		int width;
 		int height;
 		float speed;
+		Game* gameReference;
 	public:
 		GameObject() {};
-		GameObject(float xPos, float yPos, int objWidth, int objHeight);
+		GameObject(float xPos, float yPos, int objWidth, int objHeight, Game* game);
 		~GameObject();
 		virtual void Update();
 		void Render();
-		void AddTexture(std::string);
-		void Destroy();
+		void AddTexture(std::string); // add textures to gameobject
+		void Destroy(); // destroy gameobject
 };
