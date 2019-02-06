@@ -5,7 +5,7 @@ IceScoop::IceScoop(float x, float y, int width, int height, Game* game) : GameOb
 }
 
 IceScoop::~IceScoop() {
-
+	std::cout << "yah" << std::endl;
 }
 
 void IceScoop::Update() {

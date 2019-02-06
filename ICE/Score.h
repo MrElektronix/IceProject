@@ -10,4 +10,5 @@ class Score {
 		~Score();
 		void Render(Game* game);
 		void Update();
+		void AddScore(int newScore);
 };

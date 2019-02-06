@@ -17,6 +17,10 @@ void Score::Update() {
 	this->text->SetMessage("Score: " + std::to_string(this->currentScore));
 }
 
+void Score::AddScore(int newScore) {
+	this->currentScore += newScore;
+}
+
 void Score::Render(Game* game) {
 	//render the text
 	this->text->Render(50, 50, game->renderer);

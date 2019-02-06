@@ -1,6 +1,7 @@
 #pragma once
 
-#include "IceScoop.h";
+#include "IceScoop.h"
+#include <vector>
 
 
 class ScoopSpawner {
@@ -8,9 +9,9 @@ class ScoopSpawner {
 		float _spawnRate;
 		Game* game;
 	public:
-		int maxObjectCount;
+		int maxObjCount;
 		int objectCount;
-		IceScoop *scoops;
+		std::vector<IceScoop> scoops;
 	public:
 		ScoopSpawner(int objcount, float spawnrate, Game* game);
 		~ScoopSpawner();
